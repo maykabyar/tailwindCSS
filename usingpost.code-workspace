@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "..\\vegoniauniversity"
+		},
+		{
+			"path": "..\\javascriptl2\\tabs"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "vegoniauniversity"
+	}
+}

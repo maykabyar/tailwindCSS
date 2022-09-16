@@ -1,0 +1,166 @@
+tailwindcss.com
+
+Integrate Methods
+1.Using CDN Link ( Content Deliver Network )
+2.Using Tailwind CLI
+3.Using PostCSS
+Method 2,3 is use with node js
+
+for checking node js version in cmd
+node -v then click enter ( nodejs shi yin pay ml )
+
+
+1.Using CDN Link ( Content Deliver Network )
+<script src="https://cdn.tailwindcss.com"></script>
+
+
+3.Using PostCSS
+open "postcss" folder
+open terminal in terminal paste this for install V
+=> install tailwind in node library
+ npm install -D tailwindcss postcss autoprefixer  ( nodejs yae library htae mr tailwind ko install lote tr )
+=> Create tailwind.config.js file ( tailwind file a thit lot )
+ npx tailwindcss confix
+
+ => Add PostCss File ( Create postcss.config.js)
+ (module.exports = {
+    plugins: {
+      tailwindcss: {},
+      autoprefixer: {},
+    }
+  }) htae ml file htae mr
+
+ => and write down in tailwind.config.js htae ka content:["./public/**/*.html"]
+
+ . = current folder
+ ** = all folder (inside in public)
+ * = all html files
+
+ => create tailwind main files
+ => create new folder and name them "tailwind"
+ => create new file and name them "main.css" in "tailwind" folder  
+ (@tailwind base;
+@tailwind components;
+@tailwind utilities;  ) de code twe htae 
+
+
+=> Build process
+=> write down "npm init -y" in terminal ( so it's will create package.json)
+=> write down in package.json ( htae ka script htae mr ) > "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+	"build": "tailwind -i ./tailwind/main.css -o ./public/tailwind.css"
+}
+
+-i = install
+-o = open
+
+=> go to termanil and enter "npm run build"
+
+
+
+ 
+
+
+TailwindCSS PostCSS setup ချနည်း
+
+Folder အလွတ်တစ်ယူပြီး
+VS code မှာ ဖွင့်ပါ
+
+Terminal တစ်ခုယူပြီး
+
+npm install -D tailwindcss postcss autoprefixer
+
+ဆိုတဲ့ command ကို terminal မှာ run ပါ 
+
+node_modules 
+package-lock.json
+package.json 
+
+ဆိုပြီး node folder တစ်ခု 
+json file ၂ ခုကျလာပါမယ်
+
+ပြီးရင်  ခုန terminal မှာဘဲ
+
+npm tailwindcss init ကို run ပါ
+
+tailwind.config.js ဆိုတဲ့ file တစ်ခုထပ်ပေါ်လာပါမယ်။ 
+
+
+ပြီးရင် public folder နဲ့ tailwind folder ၂ ခုကို
+node_modules folder နဲ့အပြိုင်ဆောက်ပါမယ်။
+(နဂိုရှိပြီး folder နဲ့ file တွေဘေးမှာဆောက်တာကိုပဲပြောတာပါ တခြား folder ထဲဝင်ဆောက်ရတာမဟုတ်ပါ။)
+
+tailwind folder ထဲမှာ main.css ကိုဆောက်ပြီး
+SACSS code ၃ ကြောင်းကိုရေးပါမယ်။ 
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+ပြီးရင် tailwind.config.js ကိုသွားပြီး
+content:[] ထဲမှာ public folder နဲ့ သူ့ထဲက
+Sub folder တွေ file တွေအကုန်ပါအောင်
+Path ရေးရပါမယ်
+
+content:[“./public/**/*.html”] 
+
+ပြီးရင် postcss.config.js file ကို ရှိပြီးသား
+file တွေ folder တွေနဲ့အပြိုင်ဆောက်ပါမယ်
+
+ပြီးရင် အောက်ပါ code ကို postcss.config.js ထဲ
+copy Paste ပါမယ် 
+
+module.exports = {
+  plugins: {
+    tailwindcss: {},
+    autoprefixer: {},
+  }
+}
+
+ပြီးရင် npm init -y ကို Terminal မှာရိုက်မယ် 
+
+ပြီးရင် package.json မှာ
+
+Script သစ်သွားရေးမယ်
+(Tailwind folder ထဲက main.css မှာ ရှိတဲ့
+Scss code  ၃ ကြောင်းကနေ node_modules ထဲက
+CSS files တွေကိုဆွဲထုတ်ပြီး compile မယ်
+ပြီးရင် public folder မှာ tailwind.css file ကို
+ထွက်လာစေမယ့် script၊ အဲ့ tailwind.css file ကို
+Public ထဲက HTML file တွေမှာ link သွားချိတ်ပြီး
+Tailwind ကိုသုံးလိုရပါပြီ )
+
+Tailwind ရဲ့ Docs မှာ
+Tailwind CLI အောက်မှာ
+ရှိတဲ့ npx command ကိုသွားကူးပြီး
+ကိုယ့် project မှာပေးထားတဲ့နာမည်တွေ
+နဲ့လိုက်အောင် command ကို လိုက်ပြင်။
+
+ပြင်တဲ့နေရာမှာ tailwind docs ရဲ့
+Command က tailwindcss ဆိုပြီးပါတယ်
+အဲ့တာကို script မှာ ရေးတဲ့အခါ
+css ဖြုတ်ပြီး tailwind ပဲရေးရမယ်
+
+ဥပမာ 
+
+“scripts”:{
+  “build”:”tailwind -i ./tailwind/main.css -o ./public/tailwind.css - - watch” 
+}
+
+
+Terminal မှာ npm run build 
+လိုရိုက် ဒီနေရာမှာ build က
+package.json မှာခုနတင်ဆောက်ထားတဲ့
+Build script 
+
+npm run build 
+run ပြီးရင် public folder မှာ 
+tailwind.css file ရလာပြီဆို
+Tailwind CSS ကို PostCSS နဲ့
+Setup လုပ်တာအောင်မြင်ပါပြီ။ 
+
+Public folder ထဲမှာ HTML file တစ်ခုဆောက်ပြီး
+tailwind.css file ( compiled ပြီးရလာတဲ့ file ) 
+ကို css link ချိတ်သလိုချိတ်ပြီး tailwind class 
+တွေပေးပြီး အလုပ် လုပ်/မလုပ် စမ်းနိုင်ပါတယ်။
