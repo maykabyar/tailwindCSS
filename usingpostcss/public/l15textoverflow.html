@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Text Over Flow</title>
+        <link href="./tailwind.css" rel="stylesheet" type="text/css" />
+        <style>
+
+            .box{
+                width: 450px;
+                height: 200px;
+                border: 1px solid steelblue;
+            }
+
+        </style>
+    </head>
+    <body>
+        
+        <h1>This is a tailwind css</h1>
+
+        <div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui perferendis vero modi, recusandae alias quidem eius delectus dolorem placeat ducimus odit. Alias laudantium sequi perspiciatis quod aperiam facere, ducimus quibusdam.</p>
+        </div>
+
+        <hr/>
+
+        <div>
+            <p class="truncate">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui perferendis vero modi, recusandae alias quidem eius delectus dolorem placeat ducimus odit. Alias laudantium sequi perspiciatis quod aperiam facere, ducimus quibusdam.</p>
+        </div>
+
+        <hr/>
+
+        <div class="box">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi suscipit libero earum voluptates, hic quia repellat, adipisci eum molestias, eos culpa! Iure neque voluptatum sit quis architecto temporibus delectus animi?</p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi suscipit libero earum voluptates, hic quia repellat, adipisci eum molestias, eos culpa! Iure neque voluptatum sit quis architecto temporibus delectus animi?</p>
+        </div>
+
+        <div class="box">
+            <p class="truncate">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi suscipit libero earum voluptates, hic quia repellat, adipisci eum molestias,</p>
+            <p class="truncate">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi suscipit libero earum voluptates,</p>
+        </div>
+
+    </body>
+</html>
